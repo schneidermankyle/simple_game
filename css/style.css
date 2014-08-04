@@ -161,3 +161,7 @@ html {
     width: 25px;
     background-color: purple;
 }
+
+.timer {
+    text-align: center;
+}

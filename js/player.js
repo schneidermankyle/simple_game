@@ -12,20 +12,22 @@ function Player() {
 
 	// Need implement all our functionality
 	var _construct = function () {
-		_trackMouse();
+		_self.setPos();
 		_primaryFire();
 	};
 
-	
-	var _trackMouse = function () {
+	this.setPos = function () {
 		_window.on('mousemove', function (e) {
-			_top = e.pageY - _window.offset().top,
-			_left = e.pageX - _window.offset().left;
+			if (controls.pause == false) {
+				_top = e.pageY - _window.offset().top,
+				_left = e.pageX - _window.offset().left;
 
-			_player.css({
-				'top' : _top,
-				'left' : _left
-			});
+				_player.css({
+					'top' : _top,
+					'left' : _left
+				});
+			}
+
 		});
 	};
 
@@ -33,13 +35,13 @@ function Player() {
 		array = {'top': _top, 'left': _left};
 
 		return array;
-	}
+	};
 
 	var _primaryFire = function () {
 		_window.on('mousedown', function () {
 			_self.fire.fireWeapon(_left, _top, _equipped);
 		});
-	}
+	};
 
 
 	// Need a fire function

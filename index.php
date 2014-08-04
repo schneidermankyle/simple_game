@@ -22,10 +22,27 @@
     </head>
 
     <body>
-
-        <div id="window">
-            <div id="player"></div>
+        <div class='row'>
+            <div class='col-xs-12 col-md-6 col-md-offset-3'>
+                <div class='row'>   
+                    <div class='upper-hud'>
+                        <div class='col-xs-4 pull-left'>
+                        </div>
+                        <div class='timer col-xs-4 pull-left'>
+                            <h3></h3>
+                        </div>
+                        <div class='col-xs-4 pull-left'>
+                        </div>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div id="window">
+                        <div id="player"></div>
+                    </div>
+                </div>
+            </div>
         </div>
+
        
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
